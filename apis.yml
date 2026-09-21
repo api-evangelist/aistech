@@ -1,17 +1,20 @@
 aid: aistech
 name: Aistech
-description: 'Aistech is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aistech Space is a European leader providing proprietary high‑resolution thermal imagery and geospatial intelligence from its own satellite constellation. The company captures the human activity layer of Earth, delivering on‑demand thermal data for security, defense, infrastructure monitoring, maritime, natural hazards, and agriculture, enabling decisive action across industries.'
 url: https://raw.githubusercontent.com/api-evangelist/aistech/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-21'
 modified: '2026-09-21'
 tags:
 - Company
+- Space
+- Satellite
+- Thermal Imagery
+- Geospatial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +22,37 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aistech-domain-security.yml
+- type: LLMsTxt
+  url: llms/aistech-llms.txt
 - type: Website
-  url: https://equityzen.com/company/aistech
+  url: https://aistechspace.com
+
+- type: Blog
+  url: https://aistechspace.com/blog/
+- type: TermsOfService
+  url: https://aistechspace.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://aistechspace.com/privacy-policy/
+- type: CookiePolicy
+  url: https://aistechspace.com/cookie-policy/
+- type: ContactUs
+  url: https://aistechspace.com/contact-us/
+- type: Careers
+  url: https://aistechspace.com/careers/
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not expose any machine‑readable API specification such as OpenAPI, GraphQL SDL, or AsyncAPI.
+  evidence:
+    - url: https://aistechspace.com
+      status: 200
+  checked: 2026-09-21
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
